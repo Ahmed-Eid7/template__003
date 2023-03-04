@@ -1,0 +1,48 @@
+@use "../general/variable" as *;
+
+.navbar {
+  background-color: $darkColor;
+
+  .navbar-brand {
+    color: $lightColor;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: #fff;
+
+      &.active,
+      &:focus,
+      &:hover {
+        color: $lightColor;
+      }
+    }
+  }
+
+  .search {
+    border-left: 1px solid $lightColor;
+
+    svg {
+      color: $lightColor;
+    }
+  }
+
+  .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+    font-size: 1.5rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &[aria-expanded="true"] {
+      border-color: $lightColor;
+    }
+  }
+
+  .btn-primary {
+    background-color: #e63946;
+    border: 1px solid #e63946;
+  }
+}
