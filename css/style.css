@@ -2,6 +2,24 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.main-btn {
+  background-color: #e63946;
+  padding: 0.5rem 1rem;
+  color: #f1faee;
+  text-decoration: none;
+}
+
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: #a8dadc;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .navbar {
   background-color: #1d3557;
 }
@@ -31,7 +49,83 @@ body {
 .navbar .navbar-toggler[aria-expanded=true] {
   border-color: #a8dadc;
 }
-.navbar .btn-primary {
+
+.landing {
+  background-color: #1d3557;
+  min-height: calc(100vh - 56px);
+}
+
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: #f1faee;
+}
+.features .icon-holder .icon {
+  color: #a8dadc;
+}
+.features .feat h4 {
+  color: #1d3557;
+}
+
+.our-work {
+  background-color: #f1faee;
+}
+.our-work ul .active {
   background-color: #e63946;
-  border: 1px solid #e63946;
+  color: #f1faee;
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+  color: #e63946;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgba(168, 218, 220, 0.76);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+.stuff .desc {
+  max-width: 500px;
+}
+
+.team {
+  background-color: #f1faee;
+}
+.team h2 {
+  color: #1d3557;
+}
+.team .box h4 {
+  background-color: #a8dadc;
+}
+
+.project {
+  background-color: #1d3557;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,103 @@
+@use "../general/variable" as *;
+
+.landing {
+  background-color: $darkColor;
+  min-height: calc(100vh - 56px);
+}
+
+.features {
+  .icon-holder {
+    height: 200px;
+
+    svg {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .number {
+      font-size: 12rem;
+      color: #f1faee;
+    }
+
+    .icon {
+      color: $lightColor;
+    }
+  }
+
+  .feat {
+    h4 {
+      color: $darkColor;
+    }
+  }
+}
+
+.our-work {
+  background-color: #f1faee;
+
+  ul {
+    .active {
+      background-color: $redColor;
+      color: $textColor;
+    }
+
+    li {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+
+      &:not(.active):hover {
+        color: $redColor;
+      }
+    }
+  }
+
+  .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: attr(data-work);
+      position: absolute;
+      background-color: rgb(168 218 220 / 76%);
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+      transition: 0.3s;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      transform: translateX(calc(-100% - 5px));
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+    }
+  }
+}
+
+.stuff {
+  .desc {
+    max-width: 500px;
+  }
+}
+
+.team {
+  background-color: $textColor;
+
+  h2 {
+    color: $darkColor;
+  }
+
+  .box {
+    h4 {
+      background-color: $lightColor;
+    }
+  }
+}
+
+.project {
+  background-color: $darkColor;
+}

@@ -1,0 +1,12 @@
+@use "./variable" as *;
+
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: $lightColor;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
