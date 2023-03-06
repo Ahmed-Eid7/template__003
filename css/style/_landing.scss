@@ -101,3 +101,64 @@
 .project {
   background-color: $darkColor;
 }
+
+.subscribe {
+  background-color: $lightColor;
+
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  ::placeholder {
+    color: #fff;
+  }
+
+  input[type="submit"] {
+    background-color: $darkColor;
+    color: $textColor;
+  }
+}
+
+.footer {
+  background-color: $darkColor;
+
+  .copyright {
+    > span {
+      color: $lightColor;
+    }
+
+    div span {
+      color: $textColor;
+    }
+  }
+
+  .contact {
+    ul {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .facebook {
+    background-color: #1877f2;
+  }
+
+  .twitter {
+    background-color: #1da1f2;
+  }
+
+  .linkedin {
+    background-color: #0077b5;
+  }
+
+  .youtube {
+    background-color: #ff0000;
+  }
+}
